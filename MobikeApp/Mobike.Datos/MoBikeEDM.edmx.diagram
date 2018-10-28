@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0e789c2d64f64c7aa131281db1080e79" Name="Diagram1" ZoomLevel="80">
+        <EntityTypeShape EntityType="MoBikeModel.administrador" Width="1.5" PointX="9.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MoBikeModel.bicicleta" Width="1.5" PointX="4.5" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MoBikeModel.boleta" Width="1.5" PointX="7.125" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MoBikeModel.comuna" Width="1.5" PointX="1.5" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MoBikeModel.estacionamiento" Width="1.5" PointX="1.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="MoBikeModel.persona" Width="1.5" PointX="7" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MoBikeModel.recorrido" Width="1.5" PointX="4" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MoBikeModel.usuario" Width="1.5" PointX="9.25" PointY="7" IsExpanded="true" />
+        <AssociationConnector Association="MoBikeModel.admin_per_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="MoBikeModel.bici_est_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="MoBikeModel.boleta_bici_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="MoBikeModel.reco_bici_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="MoBikeModel.boleta_per_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="MoBikeModel.boleta_reco_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="MoBikeModel.est_comu_fk" ManuallyRouted="false" ></AssociationConnector>
+        <AssociationConnector Association="MoBikeModel.reco_per_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="MoBikeModel.user_per_fk" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
