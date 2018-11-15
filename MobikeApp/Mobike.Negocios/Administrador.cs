@@ -47,13 +47,13 @@ namespace Mobike.Negocios
         {
             try
             {
-                Datos.persona per = (from auxper in Conexion.Mob.persona
-                                     where auxper.id_persona == this.Id_Persona
-                                     select auxper).First();
-                this.Id_Persona = per.id_persona;
-                this.Password = per.password;
-                this.Nombre = per.nombre;
-                this.Direccion = per.direccion;
+                Datos.persona adm = (from auxadm in Conexion.Mob.persona
+                                     where auxadm.id_persona == this.Id_Persona
+                                     select auxadm).First();
+                this.Id_Persona = adm.id_persona;
+                this.Password = adm.password;
+                this.Nombre = adm.nombre;
+                this.Direccion = adm.direccion;
 
                 return true;
             }

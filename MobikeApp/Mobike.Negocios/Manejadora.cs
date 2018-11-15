@@ -61,5 +61,16 @@ namespace Mobike.Negocios
             }
             return ListarRecorrido;
         }
+
+        public List<Estacionamiento> ListarEstacionamiento()
+        {
+            List<Estacionamiento> ListarEstacionamiento = new List<Estacionamiento>();
+            foreach (Datos.estacionamiento est in Conexion.Mob.estacionamiento)
+            {
+                Estacionamiento nuevoEstacionamiento = new Estacionamiento(est.id_est, est.nombre,est.direccion,est.capacidad);
+                ListarEstacionamiento.Add(nuevoEstacionamiento);
+            }
+            return ListarEstacionamiento;
+        }
     }
 }
