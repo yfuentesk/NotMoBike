@@ -6,38 +6,99 @@ using System.Threading.Tasks;
 
 namespace Mobike.Negocios
 {
-    public class Administrador
+    public class Administrador : Persona
     {
-        private string idPersona;
-        private string password;
-        private string nombre;
-        private string direccion;
-
-        public string Direccion
+        public Administrador()
         {
-            get { return direccion; }
-            set { direccion = value; }
+
         }
 
-
-        public string Nombre
+        public Administrador(string IdPersona, string Contrasena, string Nombre, string Direccion)
         {
-            get { return nombre; }
-            set { nombre = value; }
+            this.Id_Persona = IdPersona;
+            this.Password = Contrasena;
+            this.Nombre = Nombre;
+            this.Direccion = Direccion;
         }
-
-
-        public string Password
+        #region CRUD
+        public bool Create()
         {
-            get { return password; }
-            set { password = value; }
+            try
+            {
+                Datos.persona per = new Datos.persona()
+                {
+                    id_persona = this.Id_Persona,
+                    password = this.Password,
+                    nombre = this.Nombre,
+                    direccion = this.Direccion,
+
+                };
+                Conexion.Mob.persona.Add(per);
+                Conexion.Mob.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
         }
-
-
-        public string Id_Persona
+        public bool Read()
         {
-            get { return idPersona; }
-            set { idPersona = value; }
+            try
+            {
+                Datos.persona per = (from auxper in Conexion.Mob.persona
+                                     where auxper.id_persona == this.Id_Persona
+                                     select auxper).First();
+                this.Id_Persona = per.id_persona;
+                this.Password = per.password;
+                this.Nombre = per.nombre;
+                this.Direccion = per.direccion;
+
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
+        public bool Update()
+        {
+            try
+            {
+                Datos.persona per = Conexion.Mob.persona.First(p => p.id_persona == Id_Persona);
+
+                per.nombre = Nombre;
+                per.password = Password;
+                per.direccion = Direccion;
+                ;
+
+                Conexion.Mob.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
+        public bool Delete()
+        {
+            try
+            {
+                Datos.persona per = (from auxper in Conexion.Mob.persona
+                                     where auxper.id_persona == this.Id_Persona
+                                     select auxper).First();
+                Conexion.Mob.persona.Remove(per);
+                Conexion.Mob.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        #endregion
     }
+
 }
