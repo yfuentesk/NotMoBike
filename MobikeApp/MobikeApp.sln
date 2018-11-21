@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mobike.Datos", "Mobike.Dato
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mobike.Negocios", "Mobike.Negocios\Mobike.Negocios.csproj", "{9F65FDCF-CD91-45A4-BA5D-0B392C3B121D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mobike.Presentacion", "Mobike.Presentacion\Mobike.Presentacion.csproj", "{CD83DBA4-D8BC-454A-875D-AB389F29E48B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mobike.Presentación", "Mobike.Presentación\Mobike.Presentación.csproj", "{2B0B32DB-41F0-4D9E-88BF-1171117CC7C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{9F65FDCF-CD91-45A4-BA5D-0B392C3B121D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F65FDCF-CD91-45A4-BA5D-0B392C3B121D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F65FDCF-CD91-45A4-BA5D-0B392C3B121D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CD83DBA4-D8BC-454A-875D-AB389F29E48B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CD83DBA4-D8BC-454A-875D-AB389F29E48B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CD83DBA4-D8BC-454A-875D-AB389F29E48B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CD83DBA4-D8BC-454A-875D-AB389F29E48B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B0B32DB-41F0-4D9E-88BF-1171117CC7C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B0B32DB-41F0-4D9E-88BF-1171117CC7C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B0B32DB-41F0-4D9E-88BF-1171117CC7C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B0B32DB-41F0-4D9E-88BF-1171117CC7C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
